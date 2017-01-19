@@ -9,6 +9,8 @@ from getaddons import get_modules
 root_dir = os.path.dirname(os.path.abspath(__file__))
 status = 0
 
+print('ENTERING TRAVIS_AUTODOC_BUILD')
+
 for addon in get_modules(os.path.abspath('.')):
     status += subprocess.call(['sphinx-apidoc',
                                '-f',
