@@ -19,4 +19,5 @@ for addon in get_modules(os.path.abspath('.')):
                                addon])
 status += subprocess.call(['travis-sphinx', '-n', 'build'])
 
+status += subprocess.call(['travis-sphinx', '-n', 'deploy'])
 sys.exit(0 if status == 0 else 1)
